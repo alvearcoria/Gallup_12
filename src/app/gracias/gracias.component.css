@@ -1,0 +1,29 @@
+h1 {
+    color: #4C4C43;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 5rem auto; /* Centrando el contenedor y espaciado superior */
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #ccc; /* Borde del rectángulo */
+    border-radius: 10px;    /* Esquinas redondeadas */
+    background-color: #f9f9f9; /* Color de fondo */
+  }
+  
+  .thank-you-msg {
+    font-size: 1.5rem; /* Tamaño de fuente para el mensaje */
+    font-weight: bold; /* Fuente en negrita */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    color: #4C4C43;
+  }
+  
+  .info-text {
+    font-size: 1.2rem; /* Tamaño de fuente para el texto */
+    margin-bottom: 2rem; /* Espaciado inferior */
+    color: #4C4C43;
+  }
+  
