@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './cuestionario2.component.html',
   styleUrls: ['./cuestionario2.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule] // Agrega ReactiveFormsModule aquí
+  imports: [ReactiveFormsModule] 
 })
 export class Cuestionario2Component implements OnInit{
   encuestaForm: FormGroup;
@@ -17,7 +17,7 @@ export class Cuestionario2Component implements OnInit{
   constructor(
     private fb: FormBuilder,
     private firestoreService: FirestoreService,
-    private router: Router // Inyecta Router aquí
+    private router: Router 
   ) {
     this.encuestaForm = this.fb.group({
       antiguedad: ['', Validators.required],
@@ -91,18 +91,18 @@ export class Cuestionario2Component implements OnInit{
     // Verificar si ya se ha enviado el formulario
     const formSubmitted = localStorage.getItem('formSubmitted');
     if (formSubmitted) {
-      this.router.navigate(['/gracias']);
+      this.router.navigate(['/gracias_compromiso']);
     }
   }
 
-  onSubmit(): void {
+/*   onSubmit(): void {
     if (this.encuestaForm.valid) {
       console.log("Formato valido");
       console.log(this.encuestaForm.value);
       this.firestoreService.saveFormData(this.encuestaForm.value).then(() => {
         console.log("Datos guardados en Firestore");
         localStorage.setItem('formSubmitted', 'true');
-        this.router.navigate(['/gracias']); // Redirige al usuario aquí
+        this.router.navigate(['/gracias_compromiso']); // Redirige al usuario aquí
       }).catch(error => {
         console.error("Error guardando datos en Firestore", error);
       });
@@ -110,7 +110,26 @@ export class Cuestionario2Component implements OnInit{
       console.log("Formato invalido");
       this.highlightInvalidFields();
     }
-  }
+  } */
+
+    onSubmit(): void {
+      if (this.encuestaForm.valid) {
+        console.log("Formato valido");
+        console.log(this.encuestaForm.value);
+        this.firestoreService.saveFormData(this.encuestaForm.value, 'encuesta-compromiso-empleados')
+          .then(() => {
+            console.log("Datos guardados en Firestore");
+            localStorage.setItem('formSubmitted', 'true');
+            this.router.navigate(['/gracias_compromiso']);
+          }).catch(error => {
+            console.error("Error guardando datos en Firestore", error);
+          });
+      } else {
+        console.log("Formato invalido");
+        this.highlightInvalidFields();
+      }
+    }
+    
 
   highlightInvalidFields(): void {
     const controls = this.encuestaForm.controls;

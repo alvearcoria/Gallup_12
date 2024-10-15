@@ -20,7 +20,7 @@
             ¡Gracias por tu colaboración!</p>
     </div>
     <form [formGroup]="encuestaForm" (ngSubmit)="onSubmit()">
-        <!-- Antigüedad -->
+
         <div class="form-group">
             <label for="antiguedad" class="question-label">¿Cuántos años llevas en la empresa?</label>
             <select id="antiguedad" formControlName="antiguedad" class="form-select" required>
@@ -35,14 +35,14 @@
             <div class="tooltip" id="tooltip-antiguedad">Favor de responder tu antigüedad en la empresa</div>
         </div>
 
-        <!-- Edad -->
+
         <div class="form-group">
             <label for="edad" class="question-label">¿Cuál es tu edad?</label>
             <input type="number" id="edad" formControlName="edad" class="form-control" placeholder="Tu edad" required>
             <div class="tooltip" id="tooltip-edad">Favor de responder tu edad</div>
         </div>
 
-        <!-- Preguntas del Gallup 12 -->
+
         <div class="form-group">
             <label for="q1" class="question-label">1. ¿Sabes lo que se espera de ti en tu trabajo?</label>
             <select id="q1" formControlName="q1" class="form-select" required>
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q2" class="question-label">2. Tienes los materiales y equipo para hacer correctamente tu
+            <label for="q2" class="question-label">2. ¿Tienes los materiales y equipo para hacer correctamente tu
                 trabajo?</label>
             <select id="q2" formControlName="q2" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
@@ -71,7 +71,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q3" class="question-label">3. ¿tienes la oportunidad de hacer lo que mejor sabes hacer cada día
+            <label for="q3" class="question-label">3. ¿Tienes la oportunidad de hacer lo que mejor sabes hacer cada día
                 en el trabajo?</label>
             <select id="q3" formControlName="q3" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
@@ -139,7 +139,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q8" class="question-label">8. ¿La misión/propósito de su empresa hace sentir que su trabajo es
+            <label for="q8" class="question-label">8. ¿La misión/propósito de tu empresa hace sentir que tu trabajo es
                 importante?</label>
             <select id="q8" formControlName="q8" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
@@ -167,7 +167,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q10" class="question-label">10. Tienes un mejor amigo en el trabajo?</label>
+            <label for="q10" class="question-label">10. ¿Tienes un mejor amigo en el trabajo?</label>
             <select id="q10" formControlName="q10" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
                 <option value="5">Completamente de acuerdo</option>
@@ -180,7 +180,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q11" class="question-label">11. En los últimos seis meses ¿alguien en el trabajo le ha hablado
+            <label for="q11" class="question-label">11. En los últimos seis meses ¿alguien en el trabajo te ha hablado
                 sobre su progreso?</label>
             <select id="q11" formControlName="q11" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
@@ -194,7 +194,7 @@
         </div>
 
         <div class="form-group">
-            <label for="q12" class="question-label">12. En el último año ¿ha tenido la oportunidad de aprender y
+            <label for="q12" class="question-label">12. En el último año ¿has tenido la oportunidad de aprender y
                 crecer?</label>
             <select id="q12" formControlName="q12" class="form-select" required>
                 <option value="" disabled selected>Selecciona una respuesta</option>
@@ -216,6 +216,3 @@
     </form>
 </div>
 
-<!-- <div>
-    <pre>{{ this.encuestaForm.value | json }}</pre>
-</div> -->
